@@ -46,7 +46,7 @@ export default function Home({ allPostsData }) {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
-        <div className='onesignal-customlink-container'></div>
+        
       </Head>
       
       <section className={utilStyles.headingMd}>
@@ -55,6 +55,7 @@ export default function Home({ allPostsData }) {
       
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2>📝エンジニアのブログ</h2>
+        <div className='onesignal-customlink-container'></div>
         <div className={styles.grid}>
           {allPostsData.map(({id, title, date, thumbnail}) => (
               <article key={id}>
