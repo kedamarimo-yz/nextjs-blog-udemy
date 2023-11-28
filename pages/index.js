@@ -44,15 +44,15 @@ export default function Home({ allPostsData }) {
 
   return (
     <Layout home>
-      <div className='onesignal-customlink-container'></div>
       <Head>
         <title>{siteTitle}</title>
+        <div className='onesignal-customlink-container'></div>
       </Head>
-
+      
       <section className={utilStyles.headingMd}>
-        <p>私はNextjsエンジニアです/好きなフレームワークはNext.jsです</p>
+        <p>Nextjsエンジニアです/好きなフレームワークはNext.jsです</p>
       </section>
-
+      
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2>📝エンジニアのブログ</h2>
         <div className={styles.grid}>

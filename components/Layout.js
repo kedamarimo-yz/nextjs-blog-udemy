@@ -30,10 +30,7 @@ function Layout({ children, home }) {
         )}
         <h1 className={utilStyles.heading2Xl}>{name}</h1>
       </header>
-      <main>
-        
-        {children}
-      </main>
+      <main>{children}</main>
       {!home && (
         <div>
           <Link href='/'>← ホームへ戻る</Link>
