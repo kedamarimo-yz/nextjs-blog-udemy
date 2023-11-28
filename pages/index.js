@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Layout, { siteTitle } from '../components/Layout';
 import utilStyles from '../styles/utils.module.css';
 import { getPostsData } from '../lib/post';
+import React, { useEffect } from 'react';
+import OneSignal from 'react-onesignal';
 
 
 //SSGの場合
@@ -29,8 +31,20 @@ export async function getServerSideProps(context) {
 } */
 
 export default function Home({ allPostsData }) {
+  useEffect(() => {
+    (async() => {
+      await OneSignal.init({
+        appId: 'eb30895e-a391-42f9-8657-7a4507f09e00',
+        notifyButton: {
+            enable: true,
+        }
+      });
+    })()
+  })
+
   return (
     <Layout home>
+      <div className='onesignal-customlink-container'></div>
       <Head>
         <title>{siteTitle}</title>
       </Head>
